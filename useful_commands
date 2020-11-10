@@ -1,0 +1,17 @@
+
+to rebuild mavproxy:
+   cd MAVProxy
+   python setup.py build install --user
+
+to rebuild mavlink:
+   
+
+
+to rebuild pymavlink:
+   pip uninstall pymavlink
+   cd ardupilot/modules/mavlink/pymavlink
+   python setup.py install --user
+
+to rebuild binary for kakute:
+   ./waf build copter --board=KakuteF7Mini
+
