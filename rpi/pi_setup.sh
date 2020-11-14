@@ -1,4 +1,4 @@
-sudo apt update && sudo apt -y upgrade
+d sudo apt update && sudo apt -y upgrade
 sudo apt remove -y python2 python3 
 
 sudo apt-get install -y build-essential tk-dev libncurses5-dev \
@@ -15,7 +15,7 @@ make -j4
 sudo make altinstall
 # holy fuck this takes so long to do on a pi0w...
 sudo apt install -y python3-pip 
-pip3 install dronekit
+pip3 install dronekit pyserial
 
 git clone https://github.com/Vuggo/Valkyrie
 VPATH=$PWD/Valkyrie
