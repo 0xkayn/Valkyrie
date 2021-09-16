@@ -5,3 +5,7 @@
 [submodule "ardupilot"]
 	path = ardupilot
 	url = https://github.com/0xkayn/ardupilot
+
+[submodule "mavsh_core"]
+	path = mavsh_core
+	url = https://github.com/0xkayn/mavsh_core
