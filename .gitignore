@@ -1,4 +1,6 @@
-pcaps/mavsh_init_works.pcapng
+pcaps/*
+textfiles/*
 mav.parm
 mav.tlog
 mav.tlog.raw
+.vscode/settings.json

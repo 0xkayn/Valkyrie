@@ -3,6 +3,10 @@ to rebuild mavproxy:
    cd MAVProxy
    python setup.py build install --user
 
+
+running mavproxy on rpi: 
+   python3 mavproxy.py --
+
 to rebuild mavlink:
    
 
@@ -13,5 +17,4 @@ to rebuild pymavlink:
    python setup.py install --user
 
 to rebuild binary for kakute:
-   ./waf build copter --board=KakuteF7Mini
-
+   ./waf build copter --board=KakuteF7Mini --no-submodule-update

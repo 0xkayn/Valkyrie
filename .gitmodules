@@ -1,7 +1,7 @@
 [submodule "MAVProxy"]
 	path = MAVProxy
-	url = https://github.com/Vuggo/MAVProxy
+	url = https://github.com/0xkayn/MAVProxy
 
 [submodule "ardupilot"]
 	path = ardupilot
-	url = https://github.com/Vuggo/ardupilot
+	url = https://github.com/0xkayn/ardupilot

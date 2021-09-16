@@ -14,8 +14,11 @@ cd Python-$version
 make -j4
 sudo make altinstall
 # holy fuck this takes so long to do on a pi0w...
-sudo apt install -y python3-pip 
+
+sudo apt install -y python3-pip libxml2 libxml2-dev libxslt-dev
 pip3 install dronekit pyserial
+
+
 
 git clone https://github.com/Vuggo/Valkyrie
 VPATH=$PWD/Valkyrie

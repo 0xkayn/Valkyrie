@@ -6,10 +6,8 @@ Generate a message using different MAVLink versions, put in a buffer and then re
 from __future__ import print_function
 from builtins import object
 
-
 from pymavlink.dialects.v20 import ardupilotmega as mavlink
 from pymavlink import mavutil
-
 
 class fifo(object):
     def __init__(self):
@@ -35,15 +33,15 @@ def test_protocol(mavlink, signing=False):
         mav.signing.timestamp = 0
         mav.signing.sign_outgoing = True
 
-    m = mavlink.MAVLink_mavsh_init_message(1, 1)
-    print(mav.mavsh_init_encode(1,1))
-    print(mav.mavsh_response_encode(1,1,'ls'))
+    m = mavlink.MAVLink_mavsh_init_message(255, 1,1,200,0)
+    print(mav.mavsh_init_encode(255, 1,1,200,0))
+    #print(mav.mavsh_response_encode(255, 1,1,200,0))
     
     # set the WP_RADIUS parameter on the MAV at the end of the link
     #mav.param_set_send(7, 1, b"WP_RADIUS", 101, mavlink.MAV_PARAM_TYPE_REAL32)
     
     #m = mavlink.MAVLink_mavsh_init_message(1, 1)
-    m = mavlink.MAVLink_mavsh_init_message(1, 1)
+    m = mavlink.MAVLink_mavsh_init_message(255, 1,1,200,0)
         
     #mav.send()
     
@@ -83,6 +81,6 @@ print("\nTesting mavlink2 with signing\n")
 test_protocol(mavlink, True)
 
 print('testing random message?')
-print(mavlink.MAVLink_mavsh_init_message(1,1))
+#print(mavlink.MAVLink_mavsh_init_message(1,1))
 
 #print(mavsh_init_send(target_system=1, setup_flag=mavlink.MAVSH_SESSION_INIT ))
